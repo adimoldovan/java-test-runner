@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+
+    <properties>
+        <property name="filters">org.junit,org.apache.maven,sun.reflect,java.lang.reflect,org.testng,org.springframework</property>
+        <property name="pattern">%d{yyyy-MM-dd HH:mm:ss} %C:%L - %p - %m%n %xEx{filters(${filters})}</property>
+    </properties>
+
+    <Appenders>
+        <RollingFile name="LOG" filename="log.log" filePattern="log-%d{yyyy-MM-dd}-%i.log">
+            <PatternLayout pattern="${pattern}"/>
+        <Policies>
+            <SizeBasedTriggeringPolicy size="10MB"/>
+            <OnStartupTriggeringPolicy />
+            <TimeBasedTriggeringPolicy />
+        </Policies>
+        </RollingFile>
+    </Appenders>
+
+    <Loggers>
+        <Logger name="org.apache.log4j.xml" level="verbose"/>
+        <logger name="org.apache.http" level="info"/>
+        <logger name="org.springframework" level="error" additivity="false"/>
+        <logger name="com.jayway.restassured" level="error" additivity="false"/>
+        <Root level="trace">
+            <AppenderRef ref="LOG" level="trace"/>
+        </Root>
+    </Loggers>
+
+</Configuration>

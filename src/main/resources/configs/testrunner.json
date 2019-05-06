@@ -1,0 +1,7 @@
+{
+  "repoUrl": "",
+  "repoBranch": "master",
+  "workspacePath": "/path/to/local/workspace",
+  "mvnCommand": "mvn clean test",
+  "parameters": []
+}

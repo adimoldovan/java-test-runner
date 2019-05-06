@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="testrunner.controllers.MainViewController">
+    <children>
+        <GridPane layoutX="10.0" layoutY="10.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0"
+                  AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0"/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" vgrow="SOMETIMES"/>
+                <RowConstraints vgrow="SOMETIMES"/>
+                <RowConstraints vgrow="SOMETIMES"/>
+                <RowConstraints vgrow="NEVER"/>
+                <RowConstraints vgrow="SOMETIMES"/>
+            </rowConstraints>
+            <children>
+                <VBox layoutX="10.0" layoutY="10.0" spacing="10.0" AnchorPane.bottomAnchor="10.0"
+                      AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                    <children>
+                        <Separator layoutX="10.0" layoutY="374.0" prefWidth="200.0"/>
+                        <HBox alignment="BOTTOM_LEFT" spacing="10.0" VBox.vgrow="NEVER">
+                            <children>
+                                <TextField fx:id="repoTxtFld" onAction="#setRepoUrl" AnchorPane.leftAnchor="0.0"
+                                           AnchorPane.rightAnchor="150.0" AnchorPane.topAnchor="0.0"
+                                           HBox.hgrow="ALWAYS"/>
+                                <TextField fx:id="branchTxtFld" onAction="#setRepoBranch" GridPane.columnIndex="1"
+                                           HBox.hgrow="ALWAYS"/>
+                                <CheckBox fx:id="localCkBox" mnemonicParsing="false" onAction="#localRepoAction"
+                                          text="I have a local repo" GridPane.columnIndex="2" HBox.hgrow="ALWAYS"/>
+                            </children>
+                        </HBox>
+                        <Separator prefWidth="200.0"/>
+                        <HBox spacing="10.0" VBox.vgrow="NEVER">
+                            <children>
+                                <TextField fx:id="workspaceTxtFld" AnchorPane.leftAnchor="0.0"
+                                           AnchorPane.rightAnchor="150.0" AnchorPane.topAnchor="0.0"
+                                           HBox.hgrow="ALWAYS"/>
+                                <Button fx:id="workspaceBtn" maxWidth="130.0" mnemonicParsing="false"
+                                        onAction="#setWorkspacePath" prefWidth="130.0" styleClass="browseBtn"
+                                        AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0"
+                                        GridPane.columnIndex="1"/>
+                            </children>
+                        </HBox>
+                        <Separator layoutX="10.0" layoutY="42.0" prefWidth="200.0"/>
+                    </children>
+                </VBox>
+                <ScrollPane prefViewportHeight="23.0" prefViewportWidth="439.0" vbarPolicy="ALWAYS"
+                            GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.vgrow="ALWAYS">
+                    <content>
+                        <VBox fx:id="parametersVBox" spacing="5.0" VBox.vgrow="NEVER">
+                            <children>
+                                <Button fx:id="addParameterBtn" mnemonicParsing="false"
+                                        onAction="#addNewParameterControls" text="+"/>
+                            </children>
+                        </VBox>
+                    </content>
+                    <GridPane.margin>
+                        <Insets bottom="5.0" top="5.0"/>
+                    </GridPane.margin>
+                </ScrollPane>
+                <Separator prefWidth="200.0" GridPane.rowIndex="2"/>
+                <HBox fillHeight="false" spacing="10.0" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3">
+                    <children>
+                        <Button fx:id="runBtn" mnemonicParsing="false" onAction="#run" styleClass="runBtn_default"
+                                GridPane.rowIndex="3" HBox.hgrow="ALWAYS"/>
+                        <TextArea fx:id="txtArea" editable="false" HBox.hgrow="ALWAYS"/>
+                    </children>
+                    <GridPane.margin>
+                        <Insets bottom="5.0" top="5.0"/>
+                    </GridPane.margin>
+                </HBox>
+                <Separator prefWidth="200.0" GridPane.rowIndex="4"/>
+            </children>
+        </GridPane>
+    </children>
+</AnchorPane>

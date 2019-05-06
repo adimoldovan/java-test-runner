@@ -1,0 +1,215 @@
+.root{
+	-fx-base-color: #c5c5c5;
+	-fx-run-base-color: #71B05B;
+	-fx-base-foreground-color: black;
+	-fx-background-color: derive(-fx-base-color,90%);
+    -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+	-fx-text-fill: derive(-fx-base-foreground-color,10%);
+	-fx-font-size: 10pt;
+	-fx-focus-color: transparent;
+	-fx-faint-focus-color: transparent;
+}
+
+.scroll-pane{
+	-fx-border-width: 0;
+	-fx-background-insets: 0;
+	-fx-padding: 0;
+	-fx-background: derive(-fx-base-color,90%);
+}
+
+.text-field {
+    -fx-padding: 5;
+    -fx-border-color: #e2e2e2;
+    -fx-border-width: 1;
+    -fx-background-radius: 5;
+    -fx-background-color: derive(-fx-base-color,100%);
+	-fx-cursor: text;
+}
+
+.text-area {
+    -fx-padding: 5;
+    -fx-border-color: #e2e2e2;
+    -fx-border-width: 1;
+    -fx-background-radius: 15;
+    -fx-background-color: derive(-fx-base-color,100%);
+	-fx-cursor: text;
+	-fx-background-insets: 0 0 0 0, 0, 0, 0;
+}
+
+.choice-box {
+    -fx-padding: 1;
+    -fx-border-color: #e2e2e2;
+    -fx-border-width: 1;
+    -fx-background-radius: 5;
+    -fx-background-color: derive(-fx-base-color,100%);
+	-fx-cursor: hand;
+    -fx-min-width: 200;
+}
+
+.button {
+    -fx-padding: 5;
+    -fx-border-color: #e2e2e2;
+    -fx-border-width: 1;
+    -fx-background-radius: 5;
+    -fx-background-color: -fx-base-color;
+    -fx-font-size: 11pt;
+    -fx-text-fill: derive(-fx-base-foreground-color,10%);
+    -fx-background-insets: 0 0 0 0, 0, 0, 0;
+    -fx-cursor: hand;
+    -fx-min-width: 100;
+    -fx-max-height: 20;
+}
+
+#runButton{
+	-fx-background-color: -fx-run-base-color;
+	-fx-font-weight: bold;
+}
+
+#runButton:hover{
+	-fx-background-color: derive(-fx-run-base-color,60%);
+}
+
+#btnCopyCmd {
+	-fx-graphic: url('../images/copy_20px.png');
+}
+
+.runBtn_default{
+	-fx-graphic: url('../images/play_arrow_20px.png');
+}
+
+.browseBtn {
+	-fx-graphic: url('../images/folder_open_20px.png');
+}
+
+.goToBtn {
+	-fx-graphic: url('../images/input_20px.png');
+}
+
+.clearBtn {
+	-fx-graphic: url('../images/cancel_20px.png');
+}
+
+.installBtn {
+	-fx-graphic: url('../images/services_20px.png');
+}
+
+.refreshBtn {
+	-fx-graphic: url('../images/refresh_20px.png');
+}
+
+
+.button:hover {
+    -fx-background-color: derive(-fx-base-color,60%);
+}
+
+.button:disabled, .button:default:disabled {
+    -fx-text-fill: white;
+}
+
+.toggle-button {
+    -fx-padding: 5;
+    -fx-border-color: #e2e2e2;
+    -fx-border-width: 1;
+    -fx-background-radius: 5;
+    -fx-background-color: -fx-base-color;
+    -fx-font-size: 11pt;
+    -fx-text-fill: derive(-fx-base-foreground-color,10%);
+    -fx-background-insets: 0 0 0 0, 0, 0, 0;
+    -fx-cursor: hand;
+    -fx-min-width: 100;
+    -fx-graphic: url('../images/block_20px.png');
+}
+
+.toggle-button:hover {
+    -fx-background-color: derive(-fx-base-color,60%);
+}
+
+.toggle-button:selected {
+    -fx-graphic: url('../images/done_20px.png');
+}
+
+.toggle-button:disabled, .toggle-button:default:disabled {
+    -fx-text-fill: white;
+}
+
+.radio-button .radio {
+    -fx-border-width: 1;
+    -fx-border-color: #e2e2e2;
+    -fx-background-color: derive(-fx-base-color,100%);
+    -fx-background-image: null;
+    -fx-border-radius: 10;
+    -fx-padding: 4;
+    -fx-cursor: hand;
+}
+
+.check-box .box {
+    -fx-border-width: 1;
+	-fx-border-color: #e2e2e2;
+	-fx-background-color: derive(-fx-base-color,100%);
+	-fx-background-image: null;
+	-fx-border-radius: 5;
+	-fx-background-radius: 5;
+	-fx-padding: 4;
+	-fx-cursor: hand;
+}
+
+.tab-pane .tab-header-area {
+	-fx-background-color: derive(-fx-base-color,70%);
+}
+
+.tab-pane .tab-header-area .tab-header-background {
+    -fx-opacity: 0;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.416667em 0.166667em 0.0em 0.0em;
+
+}
+
+.tab-pane .tab
+{
+	-fx-padding: 2 25 2 25;
+	-fx-border-color: #e2e2e2;
+	-fx-border-width: 0;
+	-fx-background-radius: 1;
+	-fx-background-color: derive(-fx-base-color,70%);
+	-fx-font-size: 11pt;
+	-fx-text-fill: derive(-fx-base-foreground-color,10%);
+	-fx-background-insets: 0 1 0 1,0,0;
+	-fx-cursor: hand;
+	-fx-focus-color: transparent;
+	-fx-faint-focus-color: transparent;
+}
+
+.tab-pane .tab:selected
+{
+    -fx-background-color: derive(-fx-base-color,90%);
+}
+
+.tab .tab-label {
+    -fx-text-fill: -fx-base-foreground-color;
+}
+
+.scroll-bar:horizontal ,
+.scroll-bar:vertical{
+    -fx-background-color:transparent;
+}
+
+.increment-button,
+.decrement-button {
+    -fx-background-color: transparent;
+	-fx-border-color: derive(-fx-base-color,80%);
+}
+
+.scroll-bar:horizontal .track ,
+.scroll-bar:vertical .track {
+     -fx-background-color: transparent;
+	 -fx-border-color: derive(-fx-base-color,80%);
+	 -fx-background-radius: 0em;
+}
+
+.scroll-bar:horizontal .thumb,
+.scroll-bar:vertical .thumb {
+    -fx-background-color:derive(black,90%);
+	-fx-background-insets: 0, 0, 0;
+	-fx-background-radius: 0em;
+}
+
